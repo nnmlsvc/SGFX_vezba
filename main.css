@@ -1,0 +1,322 @@
+/* Global Styles  */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #707070;
+}
+li{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #707070;
+}
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #707070;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  color: #707070;
+}
+
+/* Layout */
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Specific styles */
+header {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+header:first-child {
+  justify-content: flex-start;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h1 a img {
+  width: 100px;
+  filter:grayscale(100%);
+}
+
+header nav {
+  margin: 0 auto;
+}
+
+header nav ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+header nav ul li {
+  list-style: none;
+  margin-right: 50px;
+}
+
+header nav ul li:last-of-type {
+  margin: 0;
+  position: absolute;
+  right: 0;
+}
+
+header nav ul li a {
+  text-decoration: none
+}
+
+.slider-holder {
+  height: 500px;
+  background-image: url(img/bkg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-bottom: 100px;
+}
+.slider-holder a:hover {
+  filter: drop-shadow(0 0 30px black);
+}
+.slider-holder a img{
+  width: 50px;
+
+}
+.slider-holder .left {
+  position: absolute;
+  top: 50%;
+}
+.slider-holder .right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.text-holder {
+  background-color: white;
+  padding: 30px 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 600px;
+
+}
+.text-holder h2{
+  font-size: 30px;
+  color: black;
+}
+section {
+  margin-bottom: 50px;
+}
+section h2 {
+  display: block;
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+  color: #0e2e4a;
+  margin-bottom: 40px;
+}
+
+section p {
+  margin-bottom: 50px;
+}
+
+section .row {
+  display: flex;
+  flex-direction: row;
+}
+
+section .row article:first-child {
+  margin-left: 0;
+}
+
+section .row article {
+  width: 33.333%;
+  border-top: 5px solid #0e2e4a;
+  margin-left: 50px;
+}
+
+span img {
+  width: 40px;
+  padding-right: 10px;
+  filter: custom();
+}
+
+section .row article:first-child {
+  margin-left: 0;
+}
+
+section .row article h3 {
+  display: flex;
+  align-items: center;
+  color: #0e2e4a;
+  margin: 20px 0;
+}
+
+.contact-holder {
+  background-image: url(img/contact-bkg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.contact-holder .contact-box {
+  background-color: #afdb1b;
+  height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+  border-radius: 20px;
+  position: absolute;
+  left:30%;
+  top: -40px;
+  z-index: 0;
+}
+
+.contact-holder .contact-box h3 {
+
+  margin: 0;
+  padding: 27px 0;
+  color: #fff;
+}
+
+.contact-holder .ticket-holder {
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+
+}
+.contact-holder .ticket-holder:before{
+  content:"";
+  width:100%;
+  height:5px;
+  left:0;
+  top:-5px;
+  position:absolute;
+  z-index:9;
+  background:linear-gradient(to right, white 50%, transparent 50%);
+}
+.contact-holder .ticket-holder:after{
+  content:"";
+  width:100%;
+  height:5px;
+  left:0;
+  bottom:-5px;
+  position:absolute;
+  z-index:9;
+  background:linear-gradient(to right, transparent 50%, white 50%);
+}
+.ticket-holder .col {
+  width: 50%;
+  margin-left: 40px;
+}
+.ticket-holder .col img {
+  width: 200px;
+}
+.ticket-holder .ticket-img p{
+  font-family: Arial;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.ticket-holder article h3 {
+  text-transform: uppercase;
+}
+.ticket-holder article h3, .ticket-holder article p{
+  color: white;
+}
+.ticket-holder article button {
+  color: white;
+  width: 80px;
+  height:30px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  background-color: transparent;
+}
+.ticket-img {
+  position: relative;
+}
+
+.ticket-img span {
+  display: block;
+  position: absolute;
+  top: 67%;
+  right: 0;
+}
+footer {
+  background-color: #eaf2f9;
+  align-items: center;
+}
+footer div a img {
+  width: 100px;
+}
+footer .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+footer .col {
+
+}
+
+footer div ul li {
+
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+footer div ul li:last-of-type{
+  margin-bottom: 0;
+}
+footer div ul li a {
+  text-decoration: none;
+}
+
+footer span {
+  display: block;
+  height: 20px;
+  background-color: #1d2226;
+}
+/* Helper Classes */
+.bold {
+  font-weight: bold;
+}
